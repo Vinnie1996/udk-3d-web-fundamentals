@@ -20,7 +20,7 @@ loadingManager.onError = () =>
 }
 
 const textureLoader = new THREE.TextureLoader(loadingManager)
-const matcapTexture = textureLoader.load('/matcap.png')
+const matcapTexture = textureLoader.load('/matcap02.png')
 // What is a matcap texture? Why are they so widely used? what are the disadvantages?
 // Did you notice that you have volumes event without a light?
 matcapTexture.colorSpace = THREE.SRGBColorSpace
@@ -39,7 +39,7 @@ const scene = new THREE.Scene()
 const geometry = new THREE.TorusKnotGeometry( 3, 1, 64, 64 )
 // 4 use the texture
 const material = new THREE.MeshMatcapMaterial()
-material.matcap = matcapTexture
+material.matcap02 = matcapTexture
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
